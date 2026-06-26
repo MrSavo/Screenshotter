@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  />
+  <meta name="theme-color" content="#FFFCF6" />
+  <title>Treezy</title>
+
+  <!-- Share preview metadata -->
+  <meta property="og:title" content="Treezy — Guess today's tree from hints" />
+  <meta
+    property="og:description"
+    content="A daily tree guessing game. Six clues. One tree. Can you solve it?"
+  />
+  <meta
+    property="og:image"
+    content="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Logo/Treezy_Logo_320px.png"
+  />
+  <meta property="og:url" content="https://treezy.app" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Treezy — Guess today's tree from hints" />
+  <meta
+    name="twitter:description"
+    content="A daily tree guessing game. Six clues. One tree. Can you solve it?"
+  />
+  <meta
+    name="twitter:image"
+    content="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Logo/Treezy_Logo_320px.png"
+  />
+
+  <!-- Favicons -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Logo/Treezy_Favicon.png"
+  />
+
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Logo/Treezy_Logo_320px.png"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Logo/Treezy_Logo_320px.png"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kanit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell" data-auth="guest" data-route="game">
+    <header class="app-header" aria-label="Treezy header">
+      <button class="brand-button" type="button" data-route="game" aria-label="Go to today's puzzle">
+        <img
+          class="brand-logo"
+          src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Logo/Treezy_Logo.png"
+          alt="Treezy logo"
+        />
+
+        <span class="brand-copy">
+          <strong class="brand-title">TREEZY</strong>
+          <span class="brand-subtitle">Guess today's tree from hints</span>
+        </span>
+      </button>
+
+      <button
+        class="icon-button menu-button"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main class="screen-stack" id="screenStack">
+    <!-- Privacy Policy Screen -->
+    <section class="screen legal-screen" id="privacyScreen" data-screen="privacy" aria-labelledby="privacyTitle">
+      <h1 id="privacyTitle" class="legal-title">PRIVACY POLICY</h1>
+
+      <div class="legal-meta" aria-label="Privacy Policy dates">
+        <p><strong>Effective Date:</strong> 22nd June, 2026</p>
+        <p><strong>Last Updated:</strong> 22nd June, 2026</p>
+      </div>
+
+      <article class="legal-card">
+        <section class="legal-section">
+          <h2>1. Who we are</h2>
+
+          <p>Treezy is operated by:</p>
+
+          <address>
+            George Dennison<br />
+            8444 154b St, Surrey, British Columbia, Canada, V3S 6N1<br />
+            Contact email:
+            <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a>
+          </address>
+
+          <p>
+            For privacy purposes, we are generally responsible for the personal information we collect and decide how to use.
+            Some third-party service providers process information on our behalf so we can operate the game.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>2. Scope of this Privacy Policy</h2>
+
+          <p>This Privacy Policy applies to your use of Treezy, including:</p>
+
+          <ul>
+            <li>Playing the daily tree guessing puzzle,</li>
+            <li>Creating or accessing an account,</li>
+            <li>Saving your statistics, streaks, results, and game history,</li>
+            <li>Using challenge, sharing, calendar, leaderboard, or similar game features,</li>
+            <li>Visiting our website, and</li>
+            <li>Communicating with us.</li>
+          </ul>
+
+          <p>
+            This Privacy Policy does not apply to third-party websites, apps, or services that we do not control.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>3. Information we collect</h2>
+
+          <p>We collect limited information depending on how you use Treezy.</p>
+
+          <h3>3.1 Information you provide directly</h3>
+
+          <p>If you create or use an account, we may collect:</p>
+
+          <ul>
+            <li>Email address,</li>
+            <li>Account login and verification information, and</li>
+            <li>Information included in support requests, feedback, bug reports, or other messages you send us.</li>
+          </ul>
+
+          <p>Treezy currently does not ask users to provide:</p>
+
+          <ul>
+            <li>Real name,</li>
+            <li>Profile photo,</li>
+            <li>Public biography,</li>
+            <li>Postal address,</li>
+            <li>Phone number,</li>
+            <li>Payment card information,</li>
+            <li>Government identification,</li>
+            <li>Health information,</li>
+            <li>Precise location, or</li>
+            <li>Sensitive personal information.</li>
+          </ul>
+
+          <h3>3.2 Game and account information</h3>
+
+          <p>When you use Treezy, we may collect and store information such as:</p>
+
+          <ul>
+            <li>Puzzle results,</li>
+            <li>Guesses and game progress,</li>
+            <li>Win/loss history,</li>
+            <li>Streaks, scores, rankings, and statistics,</li>
+            <li>Calendar or puzzle history activity,</li>
+            <li>Challenge or share-related activity,</li>
+            <li>Account creation date,</li>
+            <li>Last login date, and</li>
+            <li>Usage timestamps.</li>
+          </ul>
+
+          <h3>3.3 Device, usage, and analytics information</h3>
+
+          <p>
+            We use analytics tools to understand how people use Treezy and how we can improve the game.
+            These tools may collect information such as:
+          </p>
+
+          <ul>
+            <li>Pages or screens viewed,</li>
+            <li>Buttons clicked,</li>
+            <li>Game events completed,</li>
+            <li>Referring website or campaign information,</li>
+            <li>Browser type, device type, and operating system,</li>
+            <li>Approximate location,</li>
+            <li>IP address or similar network information,</li>
+            <li>Cookie identifiers, local storage identifiers, or analytics identifiers, and</li>
+            <li>Session activity and usage patterns.</li>
+          </ul>
+
+          <p>
+            We use Google Analytics and Mixpanel for analytics. We do not use these tools to collect a password,
+            because Treezy uses email-based login and does not require a password.
+          </p>
+
+          <h3>3.4 Login and email delivery information</h3>
+
+          <p>
+            We use service providers to manage email-based login and transactional emails.
+            These providers may process your email address and related delivery information so that we can send login
+            verification emails and essential account messages.
+          </p>
+
+          <h3>3.5 Technical and security information</h3>
+
+          <p>We may collect technical logs and security-related information to:</p>
+
+          <ul>
+            <li>Keep the service running,</li>
+            <li>Detect abuse, fraud, spam, or attacks,</li>
+            <li>Debug errors,</li>
+            <li>Protect accounts and data, and</li>
+            <li>Maintain service integrity.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>4. How we use information</h2>
+
+          <p>We use the information we collect to:</p>
+
+          <ul>
+            <li>Provide the Treezy game,</li>
+            <li>Let you create and access your account,</li>
+            <li>Send login verification emails,</li>
+            <li>Save your statistics, streaks, results, and game history,</li>
+            <li>Let you use account-based features,</li>
+            <li>Understand how players use Treezy,</li>
+            <li>Improve gameplay, onboarding, sharing, content, and performance,</li>
+            <li>Detect, prevent, and investigate abuse, fraud, cheating, security issues, or technical problems,</li>
+            <li>Respond to support requests,</li>
+            <li>Comply with legal obligations, and</li>
+            <li>Enforce our Terms and Conditions.</li>
+          </ul>
+
+          <p>We do not sell your personal information for money.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>5. Legal bases for processing</h2>
+
+          <p>Where privacy laws require us to identify a legal basis, we rely on the following:</p>
+
+          <ul>
+            <li><strong>Contract:</strong> to provide the game, account, login, saved statistics, and related features you request.</li>
+            <li><strong>Legitimate interests:</strong> to improve Treezy, understand usage, maintain security, prevent abuse, debug issues, and communicate with you about service-related matters.</li>
+            <li><strong>Consent:</strong> where required for analytics cookies, similar tracking technologies, or certain optional processing.</li>
+            <li><strong>Legal obligation:</strong> where we must retain, disclose, or process information to comply with applicable law.</li>
+          </ul>
+
+          <p>
+            You may withdraw consent where processing is based on consent.
+            Withdrawing consent does not affect processing that occurred before withdrawal.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>6. Cookies and similar technologies</h2>
+
+          <p>Treezy may use cookies, local storage, and similar technologies.</p>
+
+          <p>
+            Some technologies are necessary for the service to work, such as remembering login status,
+            supporting account access, protecting the service, and saving local game state.
+          </p>
+
+          <p>
+            Analytics technologies help us understand how Treezy is used.
+            Where required by law, we will ask for your consent before using non-essential analytics cookies or similar tracking technologies.
+          </p>
+
+          <p>
+            You can control cookies through your browser settings.
+            Some features may not work correctly if you block necessary cookies or local storage.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>7. Service providers</h2>
+
+          <p>We use trusted service providers to operate Treezy. These may include:</p>
+
+          <ul>
+            <li>Supabase for authentication, database, hosting, storage, and backend services,</li>
+            <li>Resend for transactional email delivery, including login verification emails,</li>
+            <li>Google Analytics for website analytics, and</li>
+            <li>Mixpanel for product analytics and behavioural insights.</li>
+          </ul>
+
+          <p>
+            These providers may process personal information only as needed to provide their services to us,
+            comply with their legal obligations, or as described in their own terms and privacy documentation.
+          </p>
+
+          <p>
+            We may change service providers over time.
+            If a change materially affects how we handle personal information, we will update this Privacy Policy.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>8. International storage and transfers</h2>
+
+          <p>
+            Treezy uses service providers that store and process information on servers located in the United States
+            and possibly other countries.
+          </p>
+
+          <p>
+            This means your information may be transferred to, stored in, or accessed from countries other than where you live.
+            These countries may have different privacy and data protection laws than your country.
+          </p>
+
+          <p>
+            Where required, we rely on appropriate safeguards for international transfers, such as data processing agreements,
+            standard contractual clauses, or other lawful transfer mechanisms.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>9. How long we keep information</h2>
+
+          <p>
+            We keep personal information only for as long as reasonably necessary for the purposes described in this Privacy Policy.
+          </p>
+
+          <p>In general:</p>
+
+          <ul>
+            <li>Account information is kept while your account remains active.</li>
+            <li>Game statistics and saved progress are kept while your account remains active, unless you ask us to delete them.</li>
+            <li>Login, security, and technical logs are kept for a limited period needed for security, debugging, and operations.</li>
+            <li>Analytics data is kept according to our analytics settings and then deleted, aggregated, or de-identified.</li>
+            <li>Backup copies may remain for a limited period after deletion before being overwritten or removed.</li>
+          </ul>
+
+          <p>When information is no longer needed, we delete it, anonymize it, or aggregate it.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>10. Your choices and rights</h2>
+
+          <p>Depending on where you live, you may have rights to:</p>
+
+          <ul>
+            <li>Access the personal information we hold about you,</li>
+            <li>Request correction of inaccurate information,</li>
+            <li>Request deletion of your account or personal information,</li>
+            <li>Object to or restrict certain processing,</li>
+            <li>Request a copy of your information in a portable format,</li>
+            <li>Withdraw consent where we rely on consent, and</li>
+            <li>Complain to a privacy or data protection authority.</li>
+          </ul>
+
+          <p>
+            To make a request, contact us at
+            <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a>.
+          </p>
+
+          <p>
+            We may need to verify your identity before completing a request.
+            For example, we may ask you to confirm access to the email address associated with your account.
+          </p>
+
+          <p>We will respond within the timeframe required by applicable law.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>11. Account deletion</h2>
+
+          <p>
+            You may request deletion of your account by contacting
+            <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a>
+            from the email address associated with your account.
+          </p>
+
+          <p>
+            Deleting your account may permanently remove your saved statistics, streaks, calendar history, rankings,
+            and other account-based data. Some information may be retained for a limited period where necessary for security,
+            legal compliance, backups, fraud prevention, or dispute resolution.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>12. Children’s privacy</h2>
+
+          <p>
+            Treezy is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+          </p>
+
+          <p>If you are under 13, do not create an account or provide personal information to Treezy.</p>
+
+          <p>
+            If you are located somewhere that requires parental consent at an older age,
+            you may only use account features if you have permission from your parent or guardian.
+          </p>
+
+          <p>
+            If we learn that we have collected personal information from a child in a way that violates applicable law,
+            we will take reasonable steps to delete it.
+          </p>
+
+          <p>
+            Parents or guardians who believe a child has provided personal information to Treezy can contact us at
+            <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a>.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>13. Security</h2>
+
+          <p>
+            We use reasonable administrative, technical, and organizational measures to protect personal information.
+          </p>
+
+          <p>
+            However, no website, database, email system, or internet transmission is completely secure.
+            We cannot guarantee that unauthorized access, loss, misuse, or disclosure will never occur.
+          </p>
+
+          <p>
+            You are responsible for keeping access to your email account secure, because Treezy uses email-based login.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>14. No sensitive information</h2>
+
+          <p>
+            Please do not send us sensitive personal information, such as government identification numbers,
+            financial information, health information, precise location information, racial or ethnic origin,
+            religious beliefs, biometric information, or similar sensitive data.
+          </p>
+
+          <p>Treezy does not need this information to provide the game.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>15. Third-party links and services</h2>
+
+          <p>
+            Treezy may contain links to third-party websites or services.
+            We are not responsible for the privacy practices, content, or security of third-party services.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>16. Changes to this Privacy Policy</h2>
+
+          <p>We may update this Privacy Policy from time to time.</p>
+
+          <p>
+            If we make material changes, we will take reasonable steps to notify users, such as updating the effective date,
+            posting a notice in the app, or sending an email where appropriate.
+          </p>
+
+          <p>
+            Your continued use of Treezy after an updated Privacy Policy becomes effective means the updated policy applies
+            to your use of the service.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>17. Contact us</h2>
+
+          <p>For privacy questions, requests, or complaints, contact:</p>
+
+          <address>
+            George Dennison<br />
+            Email: <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a><br />
+            Address: 8444 154b St, Surrey, British Columbia, Canada, V3S 6N1
+          </address>
+        </section>
+      </article>
+      <button class="cookie-text-button privacy-cookie-settings-button" id="privacyCookieSettingsBtn" type="button">
+        Manage cookie settings
+      </button>
+    </section>
+
+    <!-- Terms and Conditions Screen -->
+    <section class="screen legal-screen" id="termsScreen" data-screen="terms" aria-labelledby="termsTitle">
+      <h1 id="termsTitle" class="legal-title">TERMS AND CONDITIONS</h1>
+
+      <div class="legal-meta" aria-label="Terms and Conditions dates">
+        <p><strong>Effective Date:</strong> 22nd June, 2026</p>
+        <p><strong>Last Updated:</strong> 22nd June, 2026</p>
+      </div>
+
+      <article class="legal-card">
+        <section class="legal-section">
+          <p>
+            These Terms and Conditions (“Terms”) govern your access to and use of Treezy, including our website,
+            daily tree guessing game, account features, statistics, sharing features, and related services.
+          </p>
+
+          <p>
+            Treezy is operated by George Dennison (“Treezy,” “we,” “us,” or “our”).
+          </p>
+
+          <p>
+            By accessing or using Treezy, you agree to these Terms.
+            If you do not agree, do not use Treezy.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>1. The service</h2>
+
+          <p>
+            Treezy is a daily puzzle game where players guess a tree using clues, hints, guesses, results,
+            and related game features.
+          </p>
+
+          <p>
+            You can play the daily puzzle without an account.
+            Some features, such as saving statistics, viewing account-based history,
+            or using certain challenge features, may require an account.
+          </p>
+
+          <p>We may change, suspend, or discontinue any part of Treezy at any time.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>2. Eligibility</h2>
+
+          <p>You must be at least 13 years old to create an account.</p>
+
+          <p>
+            If you are under the age of majority where you live,
+            you may use Treezy only with permission from a parent or legal guardian.
+          </p>
+
+          <p>You may not use Treezy if applicable law prohibits you from doing so.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>3. Accounts and login</h2>
+
+          <p>
+            Treezy uses email-based login. To create or access an account,
+            you may need to provide a valid email address and verify access to that email address.
+          </p>
+
+          <p>You are responsible for:</p>
+
+          <ul>
+            <li>Providing accurate account information,</li>
+            <li>Maintaining control of the email account used to access Treezy,</li>
+            <li>Not sharing login links with others,</li>
+            <li>Not allowing unauthorized access to your account, and</li>
+            <li>Promptly notifying us if you believe your account has been accessed without permission.</li>
+          </ul>
+
+          <p>
+            We may suspend or terminate accounts that violate these Terms or create risk for Treezy,
+            other users, or the service.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>4. Acceptable use</h2>
+
+          <p>You agree not to:</p>
+
+          <ul>
+            <li>Use Treezy for unlawful, harmful, fraudulent, abusive, or deceptive purposes,</li>
+            <li>Attempt to interfere with the operation, security, or integrity of the service,</li>
+            <li>Attempt to access accounts, systems, data, or features without authorization,</li>
+            <li>Use bots, scripts, scrapers, automation, or other tools to abuse the game or service,</li>
+            <li>Reverse engineer, copy, or modify the service except where allowed by law,</li>
+            <li>Submit malicious code, spam, or harmful content,</li>
+            <li>Misrepresent your identity or affiliation,</li>
+            <li>Harass, threaten, or harm others,</li>
+            <li>Exploit bugs, vulnerabilities, or loopholes in a way that harms Treezy or other users, or</li>
+            <li>Use Treezy in a way that could damage, disable, overload, or impair the service.</li>
+          </ul>
+
+          <p>
+            We may investigate suspected violations and take action we consider appropriate,
+            including removing access, resetting statistics, blocking activity, or terminating accounts.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>5. Game results, statistics, rankings, and streaks</h2>
+
+          <p>
+            Treezy may provide scores, streaks, statistics, rankings, share cards, history,
+            or other game-related records.
+          </p>
+
+          <p>
+            These features are provided for entertainment. We do not guarantee that scores, streaks, rankings,
+            or statistics will always be accurate, available, recoverable, or error-free.
+          </p>
+
+          <p>
+            We may correct, reset, remove, or modify game records if we believe there has been cheating,
+            abuse, technical error, data corruption, or misuse of the service.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>6. User content and communications</h2>
+
+          <p>
+            Treezy currently does not provide public profile pages, photo uploads,
+            or general user-generated content features.
+          </p>
+
+          <p>
+            If you send us feedback, suggestions, messages, bug reports, or other communications,
+            you give us permission to use them to operate, improve, and promote Treezy without compensation to you.
+          </p>
+
+          <p>You are responsible for any information you choose to send us.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>7. Sharing and challenges</h2>
+
+          <p>
+            Treezy may allow you to share results, challenge friends, or invite others to play.
+          </p>
+
+          <p>
+            You are responsible for how and where you share Treezy content.
+            Do not use sharing features to spam, harass, mislead, or violate the rights of others.
+          </p>
+
+          <p>
+            We are not responsible for third-party platforms where you choose to share Treezy content.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>8. Intellectual property</h2>
+
+          <p>
+            Treezy, including its design, branding, game mechanics, text, artwork, software, code,
+            database structure, content, names, logos, and other materials,
+            is owned by us or our licensors and is protected by intellectual property laws.
+          </p>
+
+          <p>You may use Treezy for personal, non-commercial entertainment purposes.</p>
+
+          <p>
+            You may not copy, reproduce, distribute, sell, resell, modify, publicly display,
+            create derivative works from, or exploit Treezy or its content without our permission,
+            except where allowed by law.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>9. Third-party services</h2>
+
+          <p>
+            Treezy relies on third-party services for hosting, authentication, email delivery,
+            analytics, infrastructure, and other functionality.
+          </p>
+
+          <p>
+            We are not responsible for third-party service outages, acts, omissions,
+            security incidents, or changes.
+          </p>
+
+          <p>
+            Your use of Treezy may also be affected by the terms and policies of third-party services.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>10. Privacy</h2>
+
+          <p>Our Privacy Policy explains how we collect, use, store, and share information.</p>
+
+          <p>
+            By using Treezy, you acknowledge that we process information as described in our Privacy Policy.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>11. Service availability</h2>
+
+          <p>Treezy is provided as-is and as-available.</p>
+
+          <p>
+            We do not guarantee that Treezy will be uninterrupted, secure, error-free,
+            or available at all times. The service may be unavailable because of maintenance,
+            updates, technical issues, third-party outages, security incidents, or other reasons.
+          </p>
+
+          <p>We may modify, suspend, or discontinue Treezy at any time without liability to you.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>12. No professional advice</h2>
+
+          <p>
+            Treezy is a game for entertainment and educational interest.
+            Content about trees, species, geography, ecology, or identification may be simplified,
+            incomplete, or inaccurate.
+          </p>
+
+          <p>
+            Treezy does not provide professional forestry, botanical, ecological, legal, safety,
+            or environmental advice.
+          </p>
+
+          <p>
+            Do not rely on Treezy as your only source for identifying trees,
+            making safety decisions, or making professional decisions.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>13. Disclaimers</h2>
+
+          <p>
+            To the fullest extent permitted by law, Treezy is provided without warranties of any kind,
+            whether express, implied, or statutory.
+          </p>
+
+          <p>
+            We disclaim all warranties, including implied warranties of merchantability,
+            fitness for a particular purpose, title, non-infringement, accuracy, availability, and security.
+          </p>
+
+          <p>
+            Some jurisdictions do not allow certain warranty exclusions,
+            so some of these exclusions may not apply to you.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>14. Limitation of liability</h2>
+
+          <p>
+            To the fullest extent permitted by law, we will not be liable for indirect, incidental,
+            special, consequential, exemplary, or punitive damages, including loss of data,
+            loss of profits, loss of goodwill, service interruption, computer damage, or unauthorized access.
+          </p>
+
+          <p>
+            To the fullest extent permitted by law, our total liability for any claim related to Treezy
+            will be limited to the greater of:
+          </p>
+
+          <ul>
+            <li>The amount you paid us to use Treezy in the 12 months before the claim; or</li>
+            <li>CAD $50.</li>
+          </ul>
+
+          <p>
+            Nothing in these Terms limits liability that cannot legally be limited,
+            including liability for fraud, intentional misconduct, or rights that cannot be waived
+            under applicable consumer protection laws.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>15. Indemnity</h2>
+
+          <p>
+            To the fullest extent permitted by law, you agree to defend, indemnify, and hold harmless
+            Treezy, its operator, owners, employees, contractors, service providers, and affiliates from claims,
+            damages, liabilities, losses, costs, and expenses arising from:
+          </p>
+
+          <ul>
+            <li>Your use of Treezy,</li>
+            <li>Your violation of these Terms,</li>
+            <li>Your misuse of the service,</li>
+            <li>Your violation of law, or</li>
+            <li>Your violation of another person’s rights.</li>
+          </ul>
+
+          <p>This obligation does not apply where prohibited by law.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>16. Termination</h2>
+
+          <p>You may stop using Treezy at any time.</p>
+
+          <p>We may suspend or terminate your access to Treezy at any time if we believe:</p>
+
+          <ul>
+            <li>You violated these Terms,</li>
+            <li>Your use creates risk for Treezy or others,</li>
+            <li>We need to protect the service, users, or data,</li>
+            <li>We are required to do so by law, or</li>
+            <li>We discontinue the service.</li>
+          </ul>
+
+          <p>
+            After termination, some sections of these Terms will continue to apply,
+            including intellectual property, disclaimers, limitation of liability, indemnity,
+            governing law, and dispute provisions.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>17. Changes to these Terms</h2>
+
+          <p>We may update these Terms from time to time.</p>
+
+          <p>
+            If we make material changes, we will take reasonable steps to notify users,
+            such as updating the effective date, posting a notice, or sending an email where appropriate.
+          </p>
+
+          <p>
+            Your continued use of Treezy after updated Terms become effective means you accept the updated Terms.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>18. Governing law and disputes</h2>
+
+          <p>
+            These Terms are governed by the laws of the Province of British Columbia
+            and the federal laws of Canada that apply there, without regard to conflict of law rules.
+          </p>
+
+          <p>
+            To the fullest extent permitted by law, disputes related to Treezy or these Terms
+            will be brought in the courts located in British Columbia, Canada.
+          </p>
+
+          <p>
+            Nothing in these Terms limits any consumer protection rights or mandatory rights
+            you may have under the laws of the place where you live.
+          </p>
+
+          <p>
+            Before starting a formal legal claim, you agree to contact us at
+            <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a>
+            and try to resolve the dispute informally. We will also try to resolve disputes informally where reasonable.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>19. Contact</h2>
+
+          <p>Questions about these Terms can be sent to:</p>
+
+          <address>
+            George Dennison<br />
+            Email: <a href="mailto:info@thepmrepo.com">info@thepmrepo.com</a><br />
+            Address: 8444 154b St, Surrey, British Columbia, Canada, V3S 6N1
+          </address>
+        </section>
+      </article>
+    </section>
+
+
+      <!-- Daily Puzzle Screen -->
+      <section class="screen is-active" id="gameScreen" data-screen="game" aria-labelledby="gameTitle">
+        <h1 class="sr-only" id="gameTitle">Treezy daily tree puzzle</h1>
+
+        <article class="game-card" aria-label="Tree hint carousel">
+          <div class="hint-image-wrap">
+            <img
+              id="hintImage"
+              class="hint-image"
+              src=""
+              alt="Illustration clue for the current tree"
+            />
+
+            <p id="hintMeta" class="hint-meta">Hint 1 of 6</p>
+          </div>
+
+          <p id="hintText" class="hint-text" aria-live="polite">
+            Loading today's tree…
+          </p>
+
+          <div class="hint-controls" aria-label="Hint navigation">
+            <button
+              id="prevHintBtn"
+              class="square-button"
+              type="button"
+              aria-label="Previous hint"
+              disabled
+            >
+              <img
+                class="icon-img"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/ArrowLeft.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+
+            <div id="hintProgress" class="hint-progress" aria-label="Unlocked hints"></div>
+
+            <button
+              id="nextHintBtn"
+              class="square-button"
+              type="button"
+              aria-label="Next hint"
+              disabled
+            >
+              <img
+                class="icon-img"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/ArrowRight.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </article>
+
+        <section class="guess-section" aria-label="Make a guess">
+          <form id="guessForm" class="guess-form" autocomplete="off">
+            <label class="sr-only" for="guessInput">Enter your guess</label>
+
+            <div class="input-wrap">
+              <input
+                id="guessInput"
+                class="text-input mp-sensitive"
+                type="text"
+                placeholder="Enter your guess"
+                autocomplete="off"
+                autocapitalize="words"
+                aria-autocomplete="list"
+                aria-controls="autocompleteList"
+                aria-expanded="false"
+              />
+
+              <ul id="autocompleteList" class="autocomplete-list" role="listbox" hidden></ul>
+            </div>
+
+            <button id="submitGuessBtn" class="primary-button submit-button" type="submit">
+              Submit
+            </button>
+          </form>
+
+          <p class="microcopy">
+            <span class="microcopy-icon" aria-hidden="true"></span>
+            Not sure? Hints reveal gradually with each guess.
+          </p>
+
+          <div id="previousGuessesWrap" class="previous-guesses">
+            <h2 class="eyebrow">Previous guesses</h2>
+            <div id="guessChips" class="chip-list" aria-live="polite"></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Menu Screen -->
+      <section class="screen" id="menuScreen" data-screen="menu" aria-labelledby="menuTitle">
+        <section class="next-puzzle-card menu-puzzle-card" aria-label="Today's puzzle">
+          <div class="menu-puzzle-left">
+            <div class="menu-puzzle-heading-row">
+              <span class="menu-puzzle-icon-wrap" aria-hidden="true">
+                <img
+                  class="menu-puzzle-icon"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/CalendarBlank.png"
+                  alt=""
+                />
+              </span>
+
+              <div>
+                <p class="menu-puzzle-title">Today’s Puzzle</p>
+                <p class="menu-puzzle-label">New puzzle in:</p>
+              </div>
+            </div>
+
+            <p class="menu-countdown" id="nextPuzzleCountdown">--:--:--</p>
+
+            <button id="playTodaysPuzzleBtn" class="primary-button menu-puzzle-button" type="button">
+              Play Today’s Puzzle
+            </button>
+          </div>
+
+          <div class="menu-puzzle-divider" aria-hidden="true"></div>
+
+          <div class="menu-guest-block guest-only">
+            <img
+              class="menu-guest-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Profile_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <p class="menu-guest-title">Play as Guest</p>
+            <p class="menu-guest-copy">No account needed</p>
+          </div>
+
+          <div class="menu-streak-block auth-only">
+            <p class="menu-streak-title">Your Streak</p>
+
+            <div class="menu-streak-count-row">
+              <img
+                class="menu-streak-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Streak_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <strong id="menuCurrentStreak">0</strong>
+            </div>
+
+            <p class="menu-streak-days">days</p>
+          </div>
+        </section>
+
+        <section class="menu-benefits-section guest-only" id="guestBenefitsPanel">
+          <h1 id="menuTitle" class="menu-section-heading">Why you’ll love Treezy</h1>
+
+          <div class="benefit-grid">
+            <article>
+              <img
+                class="benefit-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Puzzles_Solved_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <strong>Learn Trees</strong>
+              <small>Discover species from around the world.</small>
+            </article>
+
+            <article>
+              <img
+                class="benefit-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Puzzle_Rank_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <strong>Track Progress</strong>
+              <small>Save your stats and progress with an account.</small>
+            </article>
+
+            <article>
+              <img
+                class="benefit-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Streak_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <strong>Build a Streak</strong>
+              <small>A new puzzle every day to keep you coming back.</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="menu-progress-section auth-only" id="menuProgressPanel">
+          <h2 class="menu-section-heading">Your progress</h2>
+
+          <div class="menu-progress-grid">
+            <article>
+              <img
+                class="menu-progress-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Puzzles_Solved_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <strong id="menuSolved">0</strong>
+              <small>Puzzles Solved</small>
+            </article>
+
+            <article>
+              <img
+                class="menu-progress-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Win_Rate_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <strong id="menuWinRate">0%</strong>
+              <small>Win Rate</small>
+            </article>
+
+            <article>
+              <img
+                class="menu-progress-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Streak_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <strong id="menuBestStreak">0</strong>
+              <small>Best Streak</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="menu-actions-section">
+          <h2 class="menu-section-heading">Quick actions</h2>
+
+          <nav class="action-list" aria-label="Treezy menu">
+            <button class="action-row" type="button" data-route="how-to">
+              <img
+                class="action-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/How_To_Play_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <strong>How to Play</strong>
+
+              <em>
+                <span class="action-lock-spacer" aria-hidden="true"></span>
+                <img
+                  class="action-chevron"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/CaretLeft.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </em>
+            </button>
+
+            <button class="action-row locked-when-guest" type="button" data-route="calendar">
+              <img
+                class="action-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Calendar_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <strong>Daily Puzzles</strong>
+
+              <em>
+                <span class="lock-icon" aria-hidden="true"></span>
+                <img
+                  class="action-chevron"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/CaretLeft.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </em>
+            </button>
+
+            <button class="action-row locked-when-guest" type="button" data-route="stats">
+              <img
+                class="action-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Stats_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <strong>Your Statistics</strong>
+
+              <em>
+                <span class="lock-icon" aria-hidden="true"></span>
+                <img
+                  class="action-chevron"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/CaretLeft.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </em>
+            </button>
+          </nav>
+        </section>
+
+        <section class="menu-auth-actions">
+          <p class="guest-only auth-nudge">
+            Create an account to save streaks, stats,<br />
+            and puzzle history
+          </p>
+
+          <button id="menuSignUpBtn" class="primary-button guest-only" type="button" data-route="auth">
+            Sign up
+          </button>
+
+          <button id="menuSignInBtn" class="secondary-button guest-only" type="button" data-route="auth">
+            Sign in
+          </button>
+
+          <button id="signOutBtn" class="danger-button auth-only" type="button">
+            Sign out
+          </button>
+        </section>
+      </section>
+
+      <!-- How To Play Screen -->
+      <section class="screen" id="howToScreen" data-screen="how-to" aria-labelledby="howToTitle">
+        <h1 id="howToTitle" class="how-to-title">How to Play</h1>
+
+        <p class="how-to-intro">
+          Treezy is a daily puzzle game where you guess the mystery tree using hints.
+          Test your knowledge and share your results!
+        </p>
+
+        <section class="how-to-steps" aria-label="How to play Treezy">
+          <article class="how-to-step">
+            <img
+              class="how-to-step-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/How_To_Play_1_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <h2>Start with the first hint</h2>
+              <p>
+                Each puzzle begins with Hint 1. Read the clue and look carefully at the image.
+                The hint may describe the tree’s habitat, history, uses, appearance, or identifying features.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-to-step">
+            <img
+              class="how-to-step-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/How_To_Play_2_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <h2>Make your first guess</h2>
+              <p>
+                Type the name of the tree into the guess box. As you type, Treezy will suggest
+                matching tree species from the list.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-to-step">
+            <img
+              class="how-to-step-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/How_To_Play_3_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <h2>Unlock more hints after each guess</h2>
+              <p>
+                If your guess is wrong, the next hint unlocks. You can swipe or use the arrows
+                to revisit hints you have already unlocked.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-to-step">
+            <img
+              class="how-to-step-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/How_To_Play_4_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <h2>Use previous guesses to narrow it down</h2>
+              <p>
+                Your guesses are saved as you play. Green means correct, amber means close,
+                and red means wrong.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-to-step">
+            <img
+              class="how-to-step-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/How_To_Play_5_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <h2>Guess the tree before you run out</h2>
+              <p>
+                You have 6 guesses. The fewer guesses you need, the better your score.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <aside class="how-to-tip-box">
+          <img
+            class="how-to-tip-icon"
+            src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Hint_Icon.png"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <p>
+            <strong>Tip:</strong> Many tree names include common words like Oak, Maple, Pine, or Cedar.
+            Try different combinations if your first guess is close.
+          </p>
+        </aside>
+
+        <button class="primary-button how-to-play-button full-width" type="button" data-route="game">
+          Play Today's puzzle
+        </button>
+      </section>
+
+      <!-- Calendar Screen -->
+      <section class="screen" id="calendarScreen" data-screen="calendar" aria-labelledby="calendarTitle">
+        <h1 id="calendarTitle" class="calendar-page-title">Daily Puzzles</h1>
+
+        <section class="calendar-card calendar-panel" aria-label="Daily puzzle calendar">
+          <div class="calendar-nav">
+            <button id="calendarPrevBtn" class="calendar-nav-button" type="button" aria-label="Previous month">
+              <img
+                class="calendar-nav-icon calendar-nav-icon-prev"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/CaretLeft.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+
+            <h2 id="calendarMonthLabel" class="calendar-month-label">Month</h2>
+
+            <button id="calendarNextBtn" class="calendar-nav-button" type="button" aria-label="Next month">
+              <img
+                class="calendar-nav-icon calendar-nav-icon-next"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/CaretLeft.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+
+          <div class="weekday-row" aria-hidden="true">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+          </div>
+
+          <div id="calendarGrid" class="calendar-grid" aria-label="Puzzle dates"></div>
+        </section>
+
+        <button id="playSelectedPuzzleBtn" class="primary-button calendar-play-button full-width" type="button">
+          Play puzzle
+        </button>
+
+        <section class="calendar-results-section" aria-labelledby="calendarResultsTitle">
+          <h2 id="calendarResultsTitle" class="calendar-results-title">Puzzle Results</h2>
+
+          <div class="calendar-results-card">
+            <div class="calendar-result-row">
+              <span class="calendar-result-label">
+                <img
+                  class="calendar-result-icon"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Guesses_Icon.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Guesses</span>
+              </span>
+
+              <strong id="calendarGuesses" class="calendar-result-value">—</strong>
+            </div>
+
+            <div class="calendar-result-row">
+              <span class="calendar-result-label">
+                <img
+                  class="calendar-result-icon"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Time_Icon.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Time</span>
+              </span>
+
+              <strong id="calendarTime" class="calendar-result-value">—</strong>
+            </div>
+
+            <div class="calendar-result-row">
+              <span class="calendar-result-label">
+                <img
+                  class="calendar-result-icon"
+                  src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Puzzle_Rank_Icon.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Puzzle Rank</span>
+              </span>
+
+              <strong id="calendarRank" class="calendar-result-value">—</strong>
+            </div>
+          </div>
+
+          <button class="secondary-button calendar-stats-button full-width" type="button" data-route="stats">
+            View all stats
+          </button>
+        </section>
+      </section>
+
+      <!-- Stats Screen -->
+      <section class="screen" id="statsScreen" data-screen="stats" aria-labelledby="statsTitle">
+        <h1 id="statsTitle" class="stats-page-title">Your Statistics</h1>
+
+        <p class="stats-page-intro">
+          Here’s how you’re doing. Track your progress and see how your Treezy skills are growing.
+        </p>
+
+        <section class="stats-card stats-card-three" aria-label="Core progress statistics">
+          <article class="stats-metric">
+            <img
+              class="stats-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Puzzles_Solved_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsSolved">0</strong>
+            <span>Puzzles Solved</span>
+            <small>The total number of puzzles you’ve completed.</small>
+          </article>
+
+          <article class="stats-metric">
+            <img
+              class="stats-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Streak_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsStreak">0 days</strong>
+            <span>Current Streak</span>
+            <small>The current consecutive puzzles you’ve solved.</small>
+          </article>
+
+          <article class="stats-metric">
+            <img
+              class="stats-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Streak_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsBest">0 days</strong>
+            <span>Best Streak</span>
+            <small>Most consecutive puzzles you’ve solved.</small>
+          </article>
+        </section>
+
+        <section class="stats-card stats-card-three" aria-label="Average performance statistics">
+          <article class="stats-metric">
+            <img
+              class="stats-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Win_Rate_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsWinRate">0%</strong>
+            <span>Win Rate</span>
+            <small>The percentage of puzzles you’ve solved.</small>
+          </article>
+
+          <article class="stats-metric">
+            <img
+              class="stats-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Guesses_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsAvgGuesses">—</strong>
+            <span>Average Guesses</span>
+            <small>Your average number of guesses per puzzle.</small>
+          </article>
+
+          <article class="stats-metric">
+            <img
+              class="stats-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Time_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsAvgTime">—</strong>
+            <span>Average Time</span>
+            <small>Your average time to solve puzzles.</small>
+          </article>
+        </section>
+
+        <section class="stats-card stats-ranking-card" aria-label="Ranking statistics">
+          <article class="stats-global-rank">
+            <img
+              class="stats-global-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Global_Ranking_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="statsGlobalRank">—</strong>
+            <span>Global Rank</span>
+            <small>Your rank among all Treezy players.</small>
+          </article>
+
+          <div class="stats-ranking-divider" aria-hidden="true"></div>
+
+          <div class="stats-ranking-list">
+            <article class="stats-ranking-row">
+              <img
+                class="stats-ranking-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Puzzle_Rank_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <div>
+                <strong id="statsBestRank">—</strong>
+                <span>Best Puzzle Rank</span>
+              </div>
+            </article>
+
+            <article class="stats-ranking-row">
+              <img
+                class="stats-ranking-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Top_10_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <div>
+                <strong id="statsOverallStanding">—</strong>
+                <span>Overall Standing</span>
+              </div>
+            </article>
+
+            <article class="stats-ranking-row">
+              <img
+                class="stats-ranking-icon"
+                src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Top_Finisher_Icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <div>
+                <strong id="statsTopTen">—</strong>
+                <span>Top 10% finishes</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- Auth Screen -->
+      <section class="screen" id="authScreen" data-screen="auth" aria-labelledby="authTitle">
+        <h1 id="authTitle" class="auth-page-title">Save your Treezy progress</h1>
+
+        <p class="auth-page-intro">
+          Sign in with your email to save your streak, stats, and puzzle history across devices.
+        </p>
+
+        <section class="auth-benefits-panel" aria-label="Account benefits">
+          <article class="auth-benefit-row">
+            <img
+              class="auth-benefit-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Puzzles_Solved_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <strong>Learn Trees</strong>
+              <small>Discover species from around the world.</small>
+            </div>
+          </article>
+
+          <article class="auth-benefit-row">
+            <img
+              class="auth-benefit-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Streak_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <strong>Build a Streak</strong>
+              <small>A new puzzle every day to keep you coming back.</small>
+            </div>
+          </article>
+
+          <article class="auth-benefit-row">
+            <img
+              class="auth-benefit-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Puzzle_Rank_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <strong>Track Progress</strong>
+              <small>See your stats and progress with an account.</small>
+            </div>
+          </article>
+        </section>
+
+        <form id="authForm" class="auth-form">
+          <label for="authEmail" class="auth-form-title">Sign in to Treezy</label>
+
+          <input
+            id="authEmail"
+            class="text-input auth-email-input mp-sensitive"
+            type="email"
+            autocomplete="email"
+            placeholder="Enter your email"
+            required
+            data-mp-mask
+          />
+
+          <button id="authSubmitBtn" class="primary-button auth-submit-button" type="submit">
+            Send sign-in link
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>OR</span>
+        </div>
+
+        <button class="secondary-button auth-later-button" type="button" data-route="game">
+          Maybe later
+        </button>
+
+        <p class="auth-note">
+          <span class="auth-note-icon" aria-hidden="true"></span>
+          <span>
+            We’ll send you a secure sign-in link.<br />
+            No password needed.
+          </span>
+        </p>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-inner">
+        <span class="app-version">Version 1.0.0</span>
+
+        <nav class="footer-legal-links" aria-label="Legal pages">
+          <button
+            class="footer-icon-button"
+            type="button"
+            data-route="privacy"
+            aria-label="Privacy Policy"
+          >
+            <img
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/ShieldCheck.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+
+          <button
+            class="footer-icon-button"
+            type="button"
+            data-route="terms"
+            aria-label="Terms and Conditions"
+          >
+            <img
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Primary_Icons/Note.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Result Modal -->
+  <div
+    class="modal-backdrop"
+    id="resultModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="resultTitle"
+    hidden
+  >
+    <div class="result-card">
+      <img
+        id="resultImage"
+        class="result-image"
+        src=""
+        alt="Tree illustration"
+      />
+
+      <section class="result-summary-card">
+        <img
+          id="resultIcon"
+          class="result-icon"
+          src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Tertiary_Icons/Puzzle_Success_Icon.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <p id="resultKicker" class="result-kicker">You got it!</p>
+
+        <h2 id="resultTitle" class="result-tree">Mystery Tree</h2>
+
+        <p id="resultScientific" class="scientific-name"></p>
+
+        <p id="resultMessage" class="result-message">
+          Great work! Come back tomorrow for a new tree to discover.
+        </p>
+      </section>
+
+      <section class="todays-results result-results-section">
+        <h3 class="result-section-title">Today’s Results</h3>
+
+        <div class="result-metric-grid">
+          <article class="result-metric-card">
+            <img
+              class="result-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Guesses_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="resultGuesses">—</strong>
+            <small>Guesses</small>
+          </article>
+
+          <article class="result-metric-card">
+            <img
+              class="result-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Time_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="resultTime">—</strong>
+            <small>Time</small>
+          </article>
+
+          <article class="result-metric-card">
+            <img
+              class="result-metric-icon"
+              src="https://icsdxwehvumvcwppwagr.supabase.co/storage/v1/object/public/Branding/Icons/Secondary_Icons/Best_Puzzle_Rank_Icon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <strong id="resultRank">—</strong>
+            <small>Puzzle Rank</small>
+          </article>
+        </div>
+      </section>
+
+      <div class="result-actions">
+        <button id="shareBtn" class="primary-button result-share-button full-width" type="button">
+          Challenge a friend
+        </button>
+
+        <button id="nextPuzzleBtn" class="secondary-button result-next-button full-width" type="button">
+          Play next puzzle
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <!-- Cookie Consent Banner -->
+  <section class="cookie-banner" id="cookieBanner" hidden aria-labelledby="cookieBannerTitle">
+    <div class="cookie-banner-card">
+      <div class="cookie-banner-copy">
+        <h2 id="cookieBannerTitle">Cookies &amp; data</h2>
+
+        <p>
+          Treezy uses essential storage to run the game, remember your local progress,
+          and move your scores into your account if you sign in. With your permission,
+          we also use analytics to improve the game.
+        </p>
+      </div>
+
+      <div class="cookie-banner-actions">
+        <button class="cookie-secondary-button" id="cookieEssentialBtn" type="button">
+          Essential only
+        </button>
+
+        <button class="cookie-primary-button" id="cookieAcceptBtn" type="button">
+          Allow analytics
+        </button>
+      </div>
+
+      <button class="cookie-text-button" id="cookieManageBtn" type="button">
+        Manage settings
+      </button>
+    </div>
+  </section>
+
+  <!-- Cookie Settings Modal -->
+  <section class="cookie-modal" id="cookieModal" hidden aria-labelledby="cookieModalTitle" aria-modal="true" role="dialog">
+    <div class="cookie-modal-backdrop" data-cookie-close></div>
+
+    <article class="cookie-modal-card">
+      <h2 id="cookieModalTitle">Cookie settings</h2>
+
+      <div class="cookie-setting-row">
+        <div>
+          <h3>Essential storage</h3>
+          <p>
+            Required for gameplay, login, saved local progress, account sync,
+            security, and remembering your cookie choice.
+          </p>
+        </div>
+
+        <span class="cookie-required-pill">Always on</span>
+      </div>
+
+      <label class="cookie-setting-row cookie-setting-toggle">
+        <div>
+          <h3>Analytics</h3>
+          <p>
+            Helps us understand puzzle starts, completions, sharing, navigation,
+            retention, and product usage through Google Analytics and Mixpanel,
+            including limited session replay with typed inputs masked.
+          </p>
+        </div>
+
+        <input id="cookieAnalyticsToggle" type="checkbox" />
+        <span class="cookie-toggle-ui" aria-hidden="true"></span>
+      </label>
+
+      <div class="cookie-modal-actions">
+        <button class="cookie-secondary-button" id="cookieModalCancelBtn" type="button">
+          Cancel
+        </button>
+
+        <button class="cookie-primary-button" id="cookieSaveBtn" type="button">
+          Save settings
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/config.js"></script>
+  <script src="/game.js"></script>
+</body>
+</html>
